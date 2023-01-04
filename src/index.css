@@ -1,13 +1,230 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+    --primary-color: #242424;
+    --dark--text-color: #afafaf;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #c0c0c0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    font-size: 1.5em;
+    height: 100vh;
+
+    direction: rtl;
+    padding: 0 23px;
+}
+
+
+.alert {
+    box-sizing: content-box;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 10px 0;
+    padding: 10px 0;
+    background: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0;
+    position: fixed;
+    pointer-events: none;
+    /* animation: alert 3s ease-in; */
+}
+
+.alert.active {
+    opacity: .7;
+}
+
+/* @keyframes alert {
+    0% {
+        opacity: 0;
+
+    }
+
+    20% {
+        opacity: .7;
+    }
+
+    80% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} */
+
+input, select {
+    width: 100%;
+    height: 53px;
+
+}
+
+
+.addSavingForm {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.block-button {
+    background: var(--primary-color);
+    color: white;
+    font-size: .7em;
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    /* height: 100px;
+    justify-content: space-between; */
+    gap: 20px;
+
+}
+
+.form-items .date-select, input {
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: .7em;
+    direction: ltr;
+
+}
+
+.date-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+}
+
+.date-inputs .date-select {
+    text-align: center;
+}
+
+.history {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding-right: 12px;
+    color: var(--dark--text-color);
+    transform: translateX(calc(-100% + 60px));
+    transition: .4s ease-in-out;
+}
+
+.history.active {
+    transform: translateX(0);
+}
+
+.history-colored-item {
+    background: var(--primary-color);
+}
+
+.history .open-history-button {
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: transparent;
+    margin-top: 56px;
+
+
+}
+
+.history .before {
+    transform: rotate(180deg) rotateY(180deg) translateY(-1px);
+}
+
+.history .after {
+    transform: translateY(-1px);
+}
+
+.history .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 0 20px 20px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history .saves {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 23px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.history .saves .saves-items {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 20px;
+
+}
+
+.history .saves .saves-items::-webkit-scrollbar {
+    width: 0
+}
+
+
+
+.history .saves .saves-items .saved {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    background: #5F5F5F;
+    color: #CECECE;
+    padding: 0 20px;
+}
+
+.history .saves .saves-items .saved:not(.saved:first-child) {
+    margin-top: 30px;
+}
+
+.history .saved .money {
+    font-size: 20px;
+}
+
+.history .saved .date {
+    font-size: 14px;
 }
