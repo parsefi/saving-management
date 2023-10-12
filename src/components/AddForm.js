@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 const AddForm = ({ onAdd }) => {
-  const [money, setMoney] = useState(0);
+  const [money, setMoney] = useState();
   const [day, setDay] = useState(1);
   const [month, setMonth] = useState(1);
   const [year, setYear] = useState(1401);
@@ -14,7 +14,7 @@ const AddForm = ({ onAdd }) => {
     setDay(1);
     setMonth(1);
     setYear(1401);
-    
+
   };
 
   return (
@@ -22,7 +22,7 @@ const AddForm = ({ onAdd }) => {
       <div className='money form-items'>
         <label htmlFor='money'>مبلغ</label>
         <input
-          type='text'
+          type='number'
           name='money'
           id='money'
           value={money}
