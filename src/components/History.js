@@ -58,7 +58,7 @@ const History = ({ data, onDelete }) => {
               return <Saved save={save} key={save.id} onDelete={onDelete} />;
             })
           ) : (
-            <p>هیچ سابقه پس اندازی در کار نیست (ریدی)</p>
+            <p>هیچ سابقه پس اندازی در کار نیست</p>
           )}
         </div>
       </div>

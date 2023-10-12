@@ -1,5 +1,42 @@
 {
-  "saves": [],
+  "saves": [
+    {
+      "money": 234,
+      "date": {
+        "day": 1,
+        "month": 1,
+        "year": 1401
+      },
+      "id": 1
+    },
+    {
+      "money": 3,
+      "date": {
+        "day": 1,
+        "month": 1,
+        "year": 1401
+      },
+      "id": 2
+    },
+    {
+      "money": 454,
+      "date": {
+        "day": 1,
+        "month": 1,
+        "year": 1401
+      },
+      "id": 3
+    },
+    {
+      "money": 345,
+      "date": {
+        "day": 1,
+        "month": 1,
+        "year": 1401
+      },
+      "id": 4
+    }
+  ],
   "total": {
     "total": 0
   }
