@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/saving-management/static/css/main.d5e59b5b.css",
+    "main.js": "/saving-management/static/js/main.9d736138.js",
+    "index.html": "/saving-management/index.html",
+    "main.d5e59b5b.css.map": "/saving-management/static/css/main.d5e59b5b.css.map",
+    "main.9d736138.js.map": "/saving-management/static/js/main.9d736138.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5e59b5b.css",
+    "static/js/main.9d736138.js"
+  ]
+}
